@@ -42,6 +42,10 @@ public class FromProfileMessageGeoFixer extends
         return PLUGIN_NAME;
     }
 
+    @Override public IPlugin<Message, Message, FromProfileMessageGeoFixerOptions> getInstance() {
+        return new FromProfileMessageGeoFixer();
+    }
+
     @Override public FromProfileMessageGeoFixerOptions getNewParameter() {
         return new FromProfileMessageGeoFixerOptions();
     }
